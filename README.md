@@ -1,4 +1,3 @@
-# HumOmni Competition
 
 ## Introduction
 
@@ -305,6 +304,82 @@ The leaderboard will report context-variant and tone-variant results separately,
 | **Bonus impact** | Context-variant benefits more from group bonus (32 vs 3) |
 | **Tone-variant efficiency** | 3B achieves higher final score on tone-variant (0.460 vs 0.420) |
 
+## Submission Checklist
+
+---
+
+### Format & Structure
+
+| # | Check Item | Requirement |
+| --- | --- | --- |
+| 1 | File format | JSONL / json1 (each line is a valid JSON object) |
+| 2 | File structure | NOT a JSON array (no outer brackets, no commas between lines) |
+| 3 | Line format | `{"question_id": "...", "answer": "..."}` |
+| 4 | question_id | Must exactly match the IDs in the test set |
+| 5 | answer | Predicted answer (e.g., "A", "B", "C", etc.) |
+| 6 | Complete data | Single file containing results for **all** subsets (GigaSpeech, MELD, EmoVDB) |
+
+---
+
+### File Naming
+
+| # | Check Item | Requirement |
+| --- | --- | --- |
+| 7 | File name | Must exactly match your registered **Team ID** |
+| 8 | Case sensitivity | Case-sensitive consistency is required |
+| 9 | File extension | `.json` (or as specified by the organizers) |
+
+**Example:**
+
+| Registered Team ID | ✅ Correct | ❌ Incorrect |
+| --- | --- | --- |
+| `TeamAlpha` | `TeamAlpha.json` | `teamalpha.json` |
+| `NLP_Lab_2026` | `NLP_Lab_2026.json` | `NLP_Lab_2026.txt` |
+
+---
+
+### Upload Rules
+
+| # | Check Item | Requirement |
+| --- | --- | --- |
+| 10 | Upload destination | Correct Google Drive folder (Track 1 or Track 2) |
+| 11 | File version | Upload the **latest** version (only most recent is evaluated) |
+| 12 | Multiple files | Only **one** file per team |
+
+---
+
+### Prohibited Actions
+
+| # | Check Item | Rule |
+| --- | --- | --- |
+| 13 | API calls on test data | ❌ Strictly prohibited |
+| 14 | API in preprocessing | ❌ Not allowed |
+| 15 | API in inference | ❌ Not allowed |
+| 16 | API in evaluation | ❌ Not allowed |
+| 17 | API in result prediction | ❌ Not allowed |
+| 18 | Allowed API usage | ✅ APIs may only be used for **model training** |
+
+---
+
+### Final Verification
+
+```markdown
+- [ ] Format: JSONL (one JSON object per line)
+- [ ] question_id matches test set exactly
+- [ ] All subsets included in one file
+- [ ] File name = Team ID (case-sensitive)
+- [ ] Uploaded to correct Google Drive folder
+- [ ] No API calls used on test data
+- [ ] File is the latest version
+```
+
+### Time 
+
+Each Monday and Friday, organizers will download the latest submissions.
+
+## Pipeline Design Version 1.0 
+
+<img width="843" height="1051" alt="9345485de4c321b2ed76413c29328ea6" src="https://github.com/user-attachments/assets/1f3320f4-d183-4688-a433-b7826d203a25" /># HumOmni Competition
 
 
 
